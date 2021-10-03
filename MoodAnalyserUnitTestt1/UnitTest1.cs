@@ -30,5 +30,17 @@ namespace MoodAnalyserUnitTestt1
             Assert.AreEqual(Expected, Mood);
 
         }
+        //tc 2.1
+        [TestMethod]
+        public void GiveNullMoodShouldReturnHappy()
+        {
+            string message = "";
+            string Expected = "HAPPY";
+            MoodAnalyser MoodAnalyse = new MoodAnalyser(message);
+            string Mood = MoodAnalyse.AnalyseMood();
+
+            Assert.AreEqual(Expected, Mood);
+
+        }
     }
 }
