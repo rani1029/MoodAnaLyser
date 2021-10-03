@@ -1,0 +1,2 @@
+# MoodAnaLyser
+MoodAnalyser use cases
