@@ -12,7 +12,7 @@ namespace MoodAnaLyzer
             NULL_TYPE_EXCEPTION,
             EMPTY_TYPE_EXCEPTION
         }
-        CustomMoodAnalyserException(ExceptionType type, string message) : base(message)
+        public CustomMoodAnalyserException(ExceptionType type, string message) : base(message)
         {
             this.type = type;
         }

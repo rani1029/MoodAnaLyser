@@ -30,16 +30,22 @@ namespace MoodAnalyserUnitTestt1
             Assert.AreEqual(Expected, Mood);
 
         }
-        //tc 2.1
+        //tc 3.1
+        //test for custom handling
         [TestMethod]
         public void GiveNullMoodShouldReturnHappy()
         {
             string message = "";
-            string Expected = "HAPPY";
+            string Expected = "Mood should not be empty";
             MoodAnalyser MoodAnalyse = new MoodAnalyser(message);
-            string Mood = MoodAnalyse.AnalyseMood();
-
-            Assert.AreEqual(Expected, Mood);
+            try
+            {
+                string ActualMood = MoodAnalyse.AnalyseMood();
+            }
+            catch (CustomMoodAnalyserException ex)
+            {
+                Assert.AreEqual(Expected, ex.Message);
+            }
 
         }
     }

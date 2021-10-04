@@ -7,6 +7,7 @@ namespace MoodAnaLyzer
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
         }
     }
 }
